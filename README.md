@@ -43,7 +43,6 @@ Merge pe orice hosting static: GitHub Pages (Settings → Pages → branch), Net
 
 ## De completat înainte de lansare
 
-- [ ] **Videoul de prezentare**: fișierele din `assets/video/` lipsesc încă. Până apar, secțiunea afișează imaginea `assets/img/video-poster.webp`.
 - [ ] **Email de rezervări**: acum e `booking@damiandraghici.ro`, o adresă **provizorie**. Se schimbă în `index.html` (`data-email` pe formular și linkul din secțiunea Rezervări).
 - [ ] **Instagram / Facebook**: nu sunt încă în footer, pentru că nu am putut confirma conturile oficiale.
 - [ ] **Coperțile albumelor**: coperțile din pagină sunt ilustrații CSS. Coperțile reale pot înlocui `.sleeve`.

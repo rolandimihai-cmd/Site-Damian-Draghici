@@ -386,7 +386,7 @@
     const loadSource = () => {
       if (video.dataset.loaded) return;
       video.dataset.loaded = '1';
-      video.src = window.innerWidth < 860 ? video.dataset.srcSm : video.dataset.src;
+      video.src = (window.innerWidth < 860 && video.dataset.srcSm) || video.dataset.src;
       video.preload = 'auto';
     };
     const sync = () => {

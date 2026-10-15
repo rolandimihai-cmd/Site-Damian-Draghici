@@ -12,7 +12,7 @@ Landing page pentru trupa **Damian Drăghici & Brothers**. Concept vizual: **FOC
 | 03 | **Destin** | Următorul concert (31.03.2027, Sala Palatului): countdown, link iaBilet, „Adaugă în calendar” (.ics) |
 | 04 | **Muzica** | Discografia în 5 albume, cu vinil care iese din copertă la hover |
 | 05 | **Legacy** | „Peste 20 de ani de foc aprins”: timeline cu fitil care arde la scroll |
-| 06 | **Galerie** | Masonry + lightbox (tastatură și swipe) |
+| 06 | **Video** | Fereastră video care se deschide pe tot ecranul la scroll; pornește fără sunet, cu butoane pentru sunet, pauză și ecran complet |
 | 07 | **Rezervări** | Formular care deschide emailul cu cererea precompletată |
 
 ## Tehnic
@@ -27,6 +27,7 @@ index.html
 assets/css/style.css
 assets/js/main.js
 assets/img/          # fotografii din Drive „Damian & Brothers / Poze site”
+assets/video/        # damian-brothers.mp4 (1080p) și damian-brothers-720.mp4 (mobil)
 ```
 
 ### Rulare locală
@@ -42,6 +43,7 @@ Merge pe orice hosting static: GitHub Pages (Settings → Pages → branch), Net
 
 ## De completat înainte de lansare
 
+- [ ] **Videoul de prezentare**: fișierele din `assets/video/` lipsesc încă. Până apar, secțiunea afișează imaginea `assets/img/video-poster.webp`.
 - [ ] **Email de rezervări**: acum e `booking@damiandraghici.ro`, o adresă **provizorie**. Se schimbă în `index.html` (`data-email` pe formular și linkul din secțiunea Rezervări).
 - [ ] **Instagram / Facebook**: nu sunt încă în footer, pentru că nu am putut confirma conturile oficiale.
 - [ ] **Coperțile albumelor**: coperțile din pagină sunt ilustrații CSS. Coperțile reale pot înlocui `.sleeve`.

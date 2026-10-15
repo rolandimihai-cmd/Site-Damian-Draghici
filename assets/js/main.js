@@ -52,7 +52,6 @@
   $$('[data-stagger]').forEach((group) => {
     $$('[data-reveal]', group).forEach((el, i) => el.style.setProperty('--d', (i * 0.12).toFixed(2) + 's'));
   });
-  $$('[data-gallery] [data-reveal]').forEach((el, i) => el.style.setProperty('--d', ((i % 3) * 0.1).toFixed(2) + 's'));
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -93,6 +92,7 @@
   const wheels = $$('[data-scroll-wheel]');
   const timeline = $('[data-timeline]');
   const fuse = timeline ? $('.timeline__fuse span', timeline) : null;
+  const reel = $('[data-reel]');
   const tlItems = timeline ? $$('.tl', timeline) : [];
   let ticking = false;
 
@@ -108,7 +108,9 @@
     if (mbar) {
       const b = booking.getBoundingClientRect();
       const inBooking = b.top < vh && b.bottom > 0;
-      mbar.classList.toggle('is-visible', y > vh * 0.8 && !inBooking);
+      const v = reel ? reel.getBoundingClientRect() : null;
+      const inVideo = v ? v.top < vh * 0.6 && v.bottom > vh * 0.4 : false;
+      mbar.classList.toggle('is-visible', y > vh * 0.8 && !inBooking && !inVideo);
     }
 
     if (!reduceMotion) {
@@ -127,6 +129,17 @@
       const p = Math.min(1, Math.max(0, (line - r.top) / r.height));
       fuse.style.setProperty('--p', p.toFixed(4));
       tlItems.forEach((li) => li.classList.toggle('is-lit', li.getBoundingClientRect().top + 14 < line));
+    }
+
+    // Fereastra video: progres 0 → 1 în primele ~70% din scroll-ul secțiunii
+    if (reel) {
+      const r = reel.getBoundingClientRect();
+      const range = r.height - vh;
+      let p = range > 0 ? Math.min(1, Math.max(0, -r.top / (range * 0.7))) : 1;
+      if (reduceMotion) p = 1;
+      p = p * p * (3 - 2 * p);
+      reel.style.setProperty('--p', p.toFixed(4));
+      reel.classList.toggle('is-open', p > 0.85 || range <= 0);
     }
   }
   window.addEventListener('scroll', () => {
@@ -359,59 +372,75 @@
     });
   }
 
-  /* ---------- Galerie: lightbox ---------- */
-  const lightbox = $('[data-lightbox]');
-  const items = $$('[data-gallery] .g-item');
-  if (lightbox && items.length && typeof lightbox.showModal === 'function') {
-    const img = $('[data-lb-img]', lightbox);
-    const cap = $('[data-lb-cap]', lightbox);
-    let index = 0;
-    let lastFocus = null;
+  /* ---------- Video de prezentare ---------- */
+  if (reel) {
+    const video = $('[data-reel-video]', reel);
+    const frame = $('[data-reel-frame]', reel);
+    const soundBtn = $('[data-reel-sound]', reel);
+    const soundLabel = $('[data-reel-sound-label]', reel);
+    const fsBtn = $('[data-reel-fullscreen]', reel);
+    const toggles = $$('[data-reel-toggle]', reel);
+    let userPaused = reduceMotion;
 
-    const show = (i) => {
-      index = (i + items.length) % items.length;
-      const item = items[index];
-      const thumb = $('img', item);
-      img.src = item.dataset.full;
-      img.alt = thumb.alt;
-      cap.textContent = item.dataset.caption || '';
-      // repornește animația de intrare
-      img.style.animation = 'none';
-      void img.offsetWidth;
-      img.style.animation = '';
+    // Sursa se încarcă abia când secțiunea se apropie (varianta 720p pe ecrane mici)
+    const loadSource = () => {
+      if (video.dataset.loaded) return;
+      video.dataset.loaded = '1';
+      video.src = window.innerWidth < 860 ? video.dataset.srcSm : video.dataset.src;
+      video.preload = 'auto';
     };
-    const open = (i) => {
-      lastFocus = document.activeElement;
-      show(i);
-      lightbox.showModal();
-      document.body.style.overflow = 'hidden';
+    const sync = () => {
+      reel.classList.toggle('is-paused', video.paused);
+      toggles.forEach((b) => b.setAttribute('aria-label', video.paused ? 'Pornește videoul' : 'Pauză'));
     };
-    const close = () => lightbox.close();
+    const play = () => {
+      loadSource();
+      const attempt = video.play();
+      if (attempt) attempt.catch(sync);
+    };
+    video.addEventListener('play', sync);
+    video.addEventListener('pause', sync);
 
-    items.forEach((item, i) => item.addEventListener('click', () => open(i)));
-    $('[data-lb-prev]', lightbox).addEventListener('click', () => show(index - 1));
-    $('[data-lb-next]', lightbox).addEventListener('click', () => show(index + 1));
-    $('[data-lb-close]', lightbox).addEventListener('click', close);
-    lightbox.addEventListener('close', () => {
-      document.body.style.overflow = '';
-      if (lastFocus) lastFocus.focus();
-    });
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox || e.target.classList.contains('lightbox__fig')) close();
-    });
-    lightbox.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight') show(index + 1);
-      if (e.key === 'ArrowLeft') show(index - 1);
+    new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) loadSource();
+    }, { rootMargin: '800px 0px' }).observe(reel);
+
+    // Rulează doar cât e pe ecran
+    new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !userPaused) play();
+      else if (!entry.isIntersecting) video.pause();
+    }, { threshold: 0.35 }).observe(frame);
+
+    toggles.forEach((btn) => btn.addEventListener('click', () => {
+      if (video.paused) { userPaused = false; play(); }
+      else { userPaused = true; video.pause(); }
+    }));
+
+    soundBtn.addEventListener('click', () => {
+      video.muted = !video.muted;
+      if (!video.muted) {
+        video.volume = 1;
+        userPaused = false;
+        play();
+      }
+      soundBtn.setAttribute('aria-pressed', String(!video.muted));
+      soundLabel.textContent = video.muted ? 'Pornește sunetul' : 'Sunet pornit';
     });
 
-    let touchX = null;
-    lightbox.addEventListener('touchstart', (e) => { touchX = e.touches[0].clientX; }, { passive: true });
-    lightbox.addEventListener('touchend', (e) => {
-      if (touchX === null) return;
-      const dx = e.changedTouches[0].clientX - touchX;
-      if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
-      touchX = null;
+    fsBtn.addEventListener('click', () => {
+      loadSource();
+      if (video.requestFullscreen) {
+        video.controls = true;
+        video.requestFullscreen().catch(() => { video.controls = false; });
+      } else if (video.webkitEnterFullscreen) {
+        video.webkitEnterFullscreen();
+      }
     });
+    document.addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement) video.controls = false;
+    });
+
+    sync();
   }
 
   /* ---------- Formular de rezervare ---------- */

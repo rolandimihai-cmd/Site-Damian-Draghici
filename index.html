@@ -118,7 +118,7 @@
       <a href="#destin">Destin</a>
       <a href="#muzica">Muzica</a>
       <a href="#legacy">Legacy</a>
-      <a href="#galerie">Galerie</a>
+      <a href="#video">Video</a>
     </nav>
     <a class="btn btn--fire btn--sm nav__cta" href="#rezervari">Rezervă trupa</a>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="meniu" aria-label="Deschide meniul">
@@ -133,7 +133,7 @@
       <a href="#destin"><small>03</small>Destin</a>
       <a href="#muzica"><small>04</small>Muzica</a>
       <a href="#legacy"><small>05</small>Legacy</a>
-      <a href="#galerie"><small>06</small>Galerie</a>
+      <a href="#video"><small>06</small>Video</a>
       <a href="#rezervari"><small>07</small>Rezervări</a>
     </nav>
     <div class="menu__foot motif" aria-hidden="true"></div>
@@ -581,27 +581,44 @@
       </div>
     </section>
 
-    <!-- ============ 06 GALERIE ============ -->
-    <section class="section galerie" id="galerie">
-      <div class="container">
-        <p class="sec-head" data-reveal><span class="sec-num">06</span> Galerie</p>
-        <div class="galerie__head">
-          <h2 class="h2" data-reveal>Din mijlocul <span class="fire-text">spectacolului</span></h2>
-          <p class="lead" data-reveal>Momente de pe scenă, din stradă și de pe stadion.</p>
+    <!-- ============ 06 VIDEO ============ -->
+    <section class="reel" id="video" data-reel>
+      <div class="reel__sticky">
+        <div class="reel__head container">
+          <p class="sec-head"><span class="sec-num">06</span> Video</p>
+          <h2 class="h2">Din mijlocul <span class="fire-text">spectacolului</span></h2>
+          <p class="lead">Treizeci de secunde din concert. Dă sunetul mai tare.</p>
         </div>
-        <div class="gallery" data-gallery>
-          <button class="g-item" type="button" data-full="assets/img/untold-dansatoare.webp" data-caption="UNTOLD 2026 · Foto: Julien Duval" data-reveal><img src="assets/img/untold-dansatoare-sm.webp" loading="lazy" width="900" height="600" alt="Dansatoare în fuste tradiționale colorate pe scena UNTOLD"></button>
-          <button class="g-item" type="button" data-full="assets/img/soliste.webp" data-caption="Soliste pe scenă" data-reveal><img src="assets/img/soliste-sm.webp" loading="lazy" width="600" height="900" alt="Soliste în rochii tradiționale roșii cântând pe scenă"></button>
-          <button class="g-item" type="button" data-full="assets/img/scena-costume.webp" data-caption="Pe scenă, cu toată frăția" data-reveal><img src="assets/img/scena-costume-sm.webp" loading="lazy" width="900" height="600" alt="Trupa în costume tradiționale, cu o roată de car în decor"></button>
-          <button class="g-item" type="button" data-full="assets/img/untold-toba.webp" data-caption="UNTOLD 2026 · Foto: RK" data-reveal><img src="assets/img/untold-toba-sm.webp" loading="lazy" width="900" height="600" alt="Damian Drăghici cântând la toba mare, alături de alămuri"></button>
-          <button class="g-item" type="button" data-full="assets/img/dansatoare-rosu.webp" data-caption="Dans și lăutărie" data-reveal><img src="assets/img/dansatoare-rosu-sm.webp" loading="lazy" width="600" height="900" alt="Dansatoare în rochii roșii în fața orchestrei"></button>
-          <button class="g-item" type="button" data-full="assets/img/untold-stadion-noapte.webp" data-caption="UNTOLD 2026 · Foto: Julien Duval" data-reveal><img src="assets/img/untold-stadion-noapte-sm.webp" loading="lazy" width="900" height="600" alt="Stadionul UNTOLD noaptea, privit de pe scenă"></button>
-          <button class="g-item" type="button" data-full="assets/img/duet-rosu.webp" data-caption="Duet în lumină roșie" data-reveal><img src="assets/img/duet-rosu-sm.webp" loading="lazy" width="900" height="600" alt="Doi artiști cântând în duet, în lumină roșie"></button>
-          <button class="g-item" type="button" data-full="assets/img/duet-scaun.webp" data-caption="O seară la Sala Palatului" data-reveal><img src="assets/img/duet-scaun-sm.webp" loading="lazy" width="600" height="900" alt="Doi artiști pe scaune înalte, pe o scenă scăldată în roșu"></button>
-          <button class="g-item" type="button" data-full="assets/img/roti-scena-larg.webp" data-caption="Roți de car, pe scenă" data-reveal><img src="assets/img/roti-scena-larg-sm.webp" loading="lazy" width="900" height="600" alt="Scena largă cu roți de car luminate și dansatori"></button>
-          <button class="g-item" type="button" data-full="assets/img/strada-bucuresti.webp" data-caption="Pe străzile Bucureștiului" data-reveal><img src="assets/img/strada-bucuresti-sm.webp" loading="lazy" width="900" height="599" alt="Fanfara cântând în mijlocul mulțimii, pe o stradă din București"></button>
-          <button class="g-item" type="button" data-full="assets/img/trio-scena.webp" data-caption="Invitați pe scenă" data-reveal><img src="assets/img/trio-scena-sm.webp" loading="lazy" width="900" height="600" alt="Trei artiști pe scenă, în fața unui decor proiectat"></button>
-          <button class="g-item" type="button" data-full="assets/img/untold-stadion-zi.webp" data-caption="UNTOLD 2026 · Foto: RK" data-reveal><img src="assets/img/untold-stadion-zi-sm.webp" loading="lazy" width="900" height="600" alt="Pasarela scenei UNTOLD, la apus, cu stadionul plin"></button>
+
+        <div class="reel__ring" aria-hidden="true"></div>
+        <div class="reel__frame" data-reel-frame>
+          <video class="reel__video" data-reel-video muted loop playsinline preload="none"
+                 poster="assets/img/video-poster.webp"
+                 data-src="assets/video/damian-brothers.mp4"
+                 data-src-sm="assets/video/damian-brothers-720.mp4"
+                 aria-label="Video de prezentare Damian Drăghici &amp; Brothers, fragment din concert"></video>
+          <div class="reel__shade" aria-hidden="true"></div>
+
+          <button class="reel__bigplay" type="button" data-reel-toggle aria-label="Pornește videoul">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></svg>
+          </button>
+
+          <div class="reel__ui">
+            <p class="reel__caption"><span class="dot" aria-hidden="true"></span> Damian Drăghici &amp; Brothers · Live</p>
+            <div class="reel__controls">
+              <button class="reel__sound" type="button" data-reel-sound aria-pressed="false">
+                <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                <span data-reel-sound-label>Pornește sunetul</span>
+              </button>
+              <button class="reel__btn" type="button" data-reel-toggle aria-label="Pauză">
+                <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+                <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></svg>
+              </button>
+              <button class="reel__btn" type="button" data-reel-fullscreen aria-label="Ecran complet">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -728,17 +745,6 @@
     <a class="btn btn--ghost btn--sm" href="#destin">Bilete DESTIN</a>
     <a class="btn btn--fire btn--sm" href="#rezervari">Rezervă trupa</a>
   </div>
-
-  <!-- Lightbox galerie -->
-  <dialog class="lightbox" data-lightbox aria-label="Galerie foto">
-    <figure class="lightbox__fig">
-      <img src="" alt="" data-lb-img>
-      <figcaption data-lb-cap></figcaption>
-    </figure>
-    <button class="lightbox__btn lightbox__close" type="button" data-lb-close aria-label="Închide galeria">✕</button>
-    <button class="lightbox__btn lightbox__prev" type="button" data-lb-prev aria-label="Fotografia anterioară"><svg aria-hidden="true" style="transform:scaleX(-1)"><use href="#arrow"/></svg></button>
-    <button class="lightbox__btn lightbox__next" type="button" data-lb-next aria-label="Fotografia următoare"><svg aria-hidden="true"><use href="#arrow"/></svg></button>
-  </dialog>
 
   <script src="assets/js/main.js" defer></script>
 </body>

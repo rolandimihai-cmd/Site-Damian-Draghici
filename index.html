@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Damian Drăghici &amp; Brothers — Lăutari de legendă</title>
-  <meta name="description" content="Damian Drăghici &amp; Brothers: lăutari de legendă, nai, alămuri și tobe. Peste 20 de ani de muzică balcanică și energie pe scenă. Rezervări pentru concerte și evenimente. DESTIN: 31 martie 2027, Sala Palatului.">
+  <meta name="description" content="Damian Drăghici &amp; Brothers: lăutari de legendă, nai, alămuri și tobe. Peste 20 de ani de muzică balcanică și energie pe scenă. Booking pentru concerte și evenimente. DESTIN: 31 martie 2027, Sala Palatului.">
   <meta name="theme-color" content="#0b0705">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
@@ -12,7 +12,7 @@
   <meta property="og:locale" content="ro_RO">
   <meta property="og:site_name" content="Damian Drăghici &amp; Brothers">
   <meta property="og:title" content="Damian Drăghici &amp; Brothers — 20 de ani pe scenă">
-  <meta property="og:description" content="Lăutari de legendă, nai, alămuri și tobe. Rezervă trupa sau ia-ți bilet la DESTIN — 31 martie 2027, Sala Palatului.">
+  <meta property="og:description" content="Sunetul petrecerii tale. Energia pe care n-o uiți. Contactează trupa sau ia-ți bilet la DESTIN — 31 martie 2027, Sala Palatului.">
   <meta property="og:image" content="assets/img/og-destin.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -100,6 +100,10 @@
       <symbol id="flame" viewBox="0 0 64 64">
         <path fill="currentColor" d="M32 6c3 9-6 13-6 21 0 4 3 7 6.5 7 4 0 6.5-3 6-8 6 4.5 9 10.5 9 16.5C47.5 52 40.5 58 32 58S16.5 52 16.5 42.5C16.5 27 29 22 32 6z"/>
       </symbol>
+      <linearGradient id="am-grad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#FA5C74"/>
+        <stop offset="1" stop-color="#FA233B"/>
+      </linearGradient>
       <symbol id="arrow" viewBox="0 0 24 24">
         <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/>
       </symbol>
@@ -114,13 +118,12 @@
     </a>
     <nav class="nav__links" aria-label="Navigare principală">
       <a href="#trupa">Trupa</a>
-      <a href="#focul">Experiența</a>
+      <a href="#experienta">Experiența</a>
       <a href="#destin">Destin</a>
       <a href="#muzica">Muzica</a>
-      <a href="#legacy">Legacy</a>
       <a href="#video">Video</a>
     </nav>
-    <a class="btn btn--fire btn--sm nav__cta" href="#rezervari">Rezervă trupa</a>
+    <a class="btn btn--fire btn--sm nav__cta" href="#contact">Contact</a>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="meniu" aria-label="Deschide meniul">
       <span></span><span></span>
     </button>
@@ -129,12 +132,11 @@
   <div class="menu" id="meniu" data-menu inert>
     <nav aria-label="Meniu mobil">
       <a href="#trupa"><small>01</small>Trupa</a>
-      <a href="#focul"><small>02</small>Experiența</a>
+      <a href="#experienta"><small>02</small>Experiența</a>
       <a href="#destin"><small>03</small>Destin</a>
       <a href="#muzica"><small>04</small>Muzica</a>
-      <a href="#legacy"><small>05</small>Legacy</a>
-      <a href="#video"><small>06</small>Video</a>
-      <a href="#rezervari"><small>07</small>Rezervări</a>
+      <a href="#video"><small>05</small>Video</a>
+      <a href="#contact"><small>06</small>Booking</a>
     </nav>
     <div class="menu__foot motif" aria-hidden="true"></div>
   </div>
@@ -155,10 +157,10 @@
             <span class="line"><span>Drăghici</span></span>
             <span class="line line--fire"><span><em>&amp;</em> Brothers</span></span>
           </h1>
-          <p class="hero__tag hero__in" style="--i:3">Focul nu se stinge. <em>Se cântă.</em></p>
-          <p class="hero__lead hero__in" style="--i:4">Naiul lui Damian, vioara, țambalul, acordeonul, alămurile și toba mare: o frăție de lăutari celebri care ridică orice sală în picioare cu muzică din rădăcinile Balcanilor.</p>
+          <p class="hero__tag hero__in" style="--i:3">Sunetul petrecerii tale.<br><em>Energia pe care n-o uiți.</em></p>
+          <p class="hero__lead hero__in" style="--i:4">Damian Drăghici &amp; Brothers aduc pe scenă o experiență live inconfundabilă, în care muzica pe care o iubești capătă o energie pe care trebuie să o trăiești ca să o înțelegi. Ritmuri balcanice explozive, cele mai iubite cântece și un sunet care ridică o sală întreagă în picioare. O petrecere în care publicul cântă, dansează și devine parte din spectacol.</p>
           <div class="hero__ctas hero__in" style="--i:5">
-            <a class="btn btn--fire" href="#rezervari">Rezervă trupa
+            <a class="btn btn--fire" href="#contact">Contactează trupa
               <svg aria-hidden="true"><use href="#arrow"/></svg></a>
             <a class="btn btn--ghost" href="#destin">Bilete DESTIN</a>
           </div>
@@ -206,9 +208,9 @@
         <div class="trupa__grid">
           <div class="trupa__copy">
             <h2 class="h2" data-reveal>Frați de scenă.<br><span class="fire-text">Lăutari de legendă.</span></h2>
-            <p class="lead" data-reveal>Damian &amp; Brothers s-a născut în decembrie 2006, din visul lui Damian Drăghici de a aduna sub același nume lăutari de top: frați de suflet, uniți de aceeași muzică.</p>
+            <p class="lead" data-reveal>Damian Drăghici &amp; Brothers s-a născut în decembrie 2006, din visul lui Damian Drăghici de a aduna sub același nume lăutari de top: frați de suflet, uniți de aceeași muzică.</p>
             <p data-reveal>De atunci, trupa duce muzica lăutărească și balcanică acolo unde merită să fie: pe scene mari, în fața unui public care nu mai stă pe scaun. Tradiția nu stă în muzeu. Trăiește pe scenă.</p>
-            <a class="link-arrow" href="#legacy" data-reveal>Povestea completă <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+            <a class="link-arrow" href="#video" data-reveal>Vezi trupa live <svg aria-hidden="true"><use href="#arrow"/></svg></a>
           </div>
           <div class="trupa__media">
             <svg class="trupa__wheel" data-scroll-wheel aria-hidden="true"><use href="#wheel"/></svg>
@@ -216,7 +218,7 @@
               <img src="assets/img/strada-bucuresti-sm.webp"
                    srcset="assets/img/strada-bucuresti-sm.webp 900w, assets/img/strada-bucuresti.webp 1800w"
                    sizes="(max-width: 860px) 90vw, 45vw" loading="lazy" width="1800" height="1197"
-                   alt="Damian &amp; Brothers cântând pe o stradă din centrul Bucureștiului, înconjurați de public">
+                   alt="Damian Drăghici &amp; Brothers cântând pe o stradă din centrul Bucureștiului, înconjurați de public">
             </figure>
             <figure class="frame frame--b" data-reveal="img" data-parallax="0.05">
               <img src="assets/img/dans-rosu-sm.webp" loading="lazy" width="900" height="600"
@@ -225,29 +227,11 @@
           </div>
         </div>
 
-        <div class="pillars" data-stagger>
-          <article class="pillar" data-reveal>
-            <span class="pillar__n">I.</span>
-            <h3>Rădăcini</h3>
-            <p>Damian s-a născut la București, într-o familie de lăutari cu tradiție de generații. A luat naiul în mână de copil și nu l-a mai lăsat.</p>
-          </article>
-          <article class="pillar" data-reveal>
-            <span class="pillar__n">II.</span>
-            <h3>Lumea</h3>
-            <p>Bursă integrală la Berklee College of Music, în Boston. Scene împărțite cu James Brown, Joe Cocker și Cyndi Lauper. Naiul românesc, dus pe scenele lumii.</p>
-          </article>
-          <article class="pillar" data-reveal>
-            <span class="pillar__n">III.</span>
-            <h3>Frăția</h3>
-            <p>Vioară, țambal, acordeon, alămuri, tobe, voci și dans. Un big band de lăutari care împletește tradiția cu jazzul, rockul și ritmurile de azi.</p>
-          </article>
-        </div>
-
         <dl class="stats" data-stagger>
           <div class="stat" data-reveal><dt><span class="fire-text" data-count="2006" data-from="1970">2006</span></dt><dd>Anul în care s-a născut trupa</dd></div>
           <div class="stat" data-reveal><dt><span class="fire-text"><span data-count="20">20</span>+</span></dt><dd>Ani de concerte și energie</dd></div>
-          <div class="stat" data-reveal><dt><span class="fire-text" data-count="5">5</span></dt><dd>Albume, cinci capitole</dd></div>
-          <div class="stat" data-reveal><dt><span class="fire-text">UNTOLD</span></dt><dd>Scena principală, 2026</dd></div>
+          <div class="stat" data-reveal><dt><span class="fire-text" data-count="6">6</span></dt><dd>Albume, de la Roma până în Cuba</dd></div>
+          <div class="stat stat--word" data-reveal><dt><span class="fire-text">Sala Palatului</span></dt><dd>Concert aniversar sold-out, 2026</dd></div>
         </dl>
       </div>
     </section>
@@ -255,80 +239,31 @@
     <div class="motif" aria-hidden="true"></div>
 
     <!-- ============ 02 EXPERIENȚA / SALES ============ -->
-    <section class="section focul" id="focul">
+    <section class="section focul" id="experienta">
       <div class="container">
         <p class="sec-head" data-reveal><span class="sec-num">02</span> Experiența</p>
-        <div class="focul__head">
-          <h2 class="h2" data-reveal>Cum se aprinde <span class="fire-text">focul</span></h2>
-          <p class="lead" data-reveal>Un concert Damian &amp; Brothers nu se ascultă. Se trăiește, în patru timpi.</p>
-        </div>
-
-        <div class="story" data-story>
-          <div class="story__media" aria-hidden="true">
-            <div class="story__frame">
-              <img class="is-active" src="assets/img/lumini-alb-sm.webp" srcset="assets/img/lumini-alb-sm.webp 599w, assets/img/lumini-alb.webp 1198w" sizes="45vw" loading="lazy" alt="">
-              <img src="assets/img/untold-toba-sm.webp" srcset="assets/img/untold-toba-sm.webp 900w, assets/img/untold-toba.webp 1800w" sizes="45vw" loading="lazy" alt="">
-              <img src="assets/img/untold-dansatoare-sm.webp" srcset="assets/img/untold-dansatoare-sm.webp 900w, assets/img/untold-dansatoare.webp 1800w" sizes="45vw" loading="lazy" alt="">
-              <img src="assets/img/roata-scena-sm.webp" srcset="assets/img/roata-scena-sm.webp 900w, assets/img/roata-scena.webp 1800w" sizes="45vw" loading="lazy" alt="">
-              <div class="story__heat"></div>
-              <p class="story__label"><span data-story-num>01</span> / 04 · <span data-story-name>Scânteia</span></p>
-              <div class="story__meter">
-                <span class="story__meter-fill"></span>
-                <small>Temperatura sălii</small>
-              </div>
-            </div>
-          </div>
-
-          <ol class="story__steps">
-            <li class="step is-active" data-step="0" data-name="Scânteia">
-              <span class="step__n">01</span>
-              <h3 class="step__t">Scânteia</h3>
-              <p>Totul începe cu un sunet de nai. O respirație, o melodie veche cât lumea, și sala tace cu sufletul la gură.</p>
-              <img class="step__img" src="assets/img/lumini-alb-sm.webp" loading="lazy" width="599" height="900" alt="Artist în costum alb pe scenă, sub fascicule de lumină, cu orchestra în spate">
-            </li>
-            <li class="step" data-step="1" data-name="Flacăra">
-              <span class="step__n">02</span>
-              <h3 class="step__t">Flacăra</h3>
-              <p>Intră vioara, țambalul și acordeonul. Apoi alămurile și toba mare. Ritmul urcă, iar palmele încep să bată singure.</p>
-              <img class="step__img" src="assets/img/untold-toba-sm.webp" loading="lazy" width="900" height="600" alt="Damian Drăghici cântând la toba mare pe scena UNTOLD, alături de saxofon și trompetă">
-            </li>
-            <li class="step" data-step="2" data-name="Vâlvătaia">
-              <span class="step__n">03</span>
-              <h3 class="step__t">Vâlvătaia</h3>
-              <p>Fuste care se rotesc, dansatoare, soliste și cântece pe care le știe toată sala. Din acest moment, nimeni nu mai rămâne pe scaun.</p>
-              <img class="step__img" src="assets/img/untold-dansatoare-sm.webp" loading="lazy" width="900" height="600" alt="Dansatoare în fuste colorate tradiționale pe scena UNTOLD">
-            </li>
-            <li class="step" data-step="3" data-name="Jarul">
-              <span class="step__n">04</span>
-              <h3 class="step__t">Jarul</h3>
-              <p>Ultimul acord se stinge, dar căldura rămâne. Oamenii pleacă acasă fredonând și se întorc la următorul concert.</p>
-              <img class="step__img" src="assets/img/roata-scena-sm.webp" loading="lazy" width="900" height="600" alt="Trupa pe scenă, în lumină caldă, cu o roată de car uriașă în decor">
-            </li>
-          </ol>
-        </div>
-
         <div class="offer">
           <div class="offer__head">
-            <h3 class="h3" data-reveal>Adu spectacolul <span class="fire-text">la tine</span></h3>
-            <p data-reveal>Trei feluri în care Damian &amp; Brothers transformă o seară obișnuită într-o amintire pe care oamenii o povestesc ani la rând.</p>
+            <h2 class="h2" data-reveal>Adu spectacolul <span class="fire-text">la tine</span></h2>
+            <p data-reveal>Trei feluri în care Damian Drăghici &amp; Brothers transformă o seară obișnuită într-o amintire pe care oamenii o povestesc ani la rând.</p>
           </div>
           <div class="offer__grid" data-stagger>
             <article class="card" data-reveal>
-              <div class="card__img"><img src="assets/img/untold-stadion-noapte-sm.webp" loading="lazy" width="900" height="600" alt="Scena principală UNTOLD noaptea, cu stadionul plin"></div>
+              <div class="card__img"><img src="assets/img/roti-scena-larg-sm.webp" loading="lazy" width="900" height="600" alt="Trupa pe o scenă mare, cu roți de car luminate și dansatori"></div>
               <div class="card__body">
                 <span class="card__n">01</span>
                 <h4>Concerte &amp; festivaluri</h4>
                 <p>Show-ul complet: big band de lăutari, soliste, dansatoare și o producție gândită pentru săli mari și festivaluri.</p>
                 <ul class="flames">
-                  <li>De la Sala Palatului la scena principală UNTOLD</li>
+                  <li>Concerte sold-out la Sala Palatului</li>
                   <li>Repertoriu construit pentru publicul tău</li>
                   <li>Spectacol cu dans, costume și scenografie</li>
                 </ul>
-                <a class="card__cta" href="#rezervari" data-event-type="Concert / festival">Cere ofertă <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+                <a class="card__cta" href="#contact" data-event-type="Concert / festival">Cere ofertă <svg aria-hidden="true"><use href="#arrow"/></svg></a>
               </div>
             </article>
             <article class="card card--hot" data-reveal>
-              <div class="card__img"><img src="assets/img/duet-rosu-sm.webp" loading="lazy" width="900" height="600" alt="Duet pe scenă, în lumină roșie"></div>
+              <div class="card__img"><img src="assets/img/scena-costume-sm.webp" loading="lazy" width="900" height="600" alt="Trupa în costume tradiționale pe scenă, cu o roată de car în decor"></div>
               <div class="card__body">
                 <span class="card__n">02</span>
                 <h4>Evenimente private &amp; corporate</h4>
@@ -338,21 +273,21 @@
                   <li>Program adaptat evenimentului</li>
                   <li>Eleganță de gală, energie de petrecere</li>
                 </ul>
-                <a class="card__cta" href="#rezervari" data-event-type="Eveniment corporate">Cere ofertă <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+                <a class="card__cta" href="#contact" data-event-type="Eveniment corporate">Cere ofertă <svg aria-hidden="true"><use href="#arrow"/></svg></a>
               </div>
             </article>
             <article class="card" data-reveal>
               <div class="card__img"><img src="assets/img/scena-verde-sm.webp" loading="lazy" width="900" height="599" alt="Trupa pe o scenă mare, cu lumini colorate și proiecții"></div>
               <div class="card__body">
                 <span class="card__n">03</span>
-                <h4>Branduri &amp; proiecte speciale</h4>
+                <h4>Proiecte speciale</h4>
                 <p>Campanii, lansări și colaborări construite pe tradiția lăutărească și balcanică, cu energia unei scene vii.</p>
                 <ul class="flames">
                   <li>Colaborări artistice și featuring-uri</li>
                   <li>Momente live pentru lansări</li>
                   <li>Proiecte culturale cu impact</li>
                 </ul>
-                <a class="card__cta" href="#rezervari" data-event-type="Brand / colaborare">Cere ofertă <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+                <a class="card__cta" href="#contact" data-event-type="Proiect special">Cere ofertă <svg aria-hidden="true"><use href="#arrow"/></svg></a>
               </div>
             </article>
           </div>
@@ -376,7 +311,7 @@
             <time datetime="2027-03-31T20:00:00+03:00">Miercuri, 31 martie 2027 · ora 20:00</time>
             <span>Sala Palatului, București · Acces de la 19:00</span>
           </p>
-          <p data-reveal>După concertul aniversar sold-out „20 de ani de fericire” și scena principală UNTOLD, frații se întorc la Sala Palatului cu un spectacol nou. Un singur cuvânt pentru o seară întreagă: DESTIN.</p>
+          <p data-reveal>După concertul aniversar sold-out „20 de ani de fericire”, frații se întorc la Sala Palatului cu un spectacol nou. Un singur cuvânt pentru o seară întreagă: DESTIN.</p>
 
           <div class="countdown" data-countdown="2027-03-31T20:00:00+03:00" data-reveal role="timer" aria-label="Timp rămas până la concertul DESTIN">
             <div><span data-cd="d">000</span><small>Zile</small></div>
@@ -401,8 +336,8 @@
         <p class="sec-head" data-reveal><span class="sec-num">04</span> Muzica</p>
         <div class="muzica__head">
           <div>
-            <h2 class="h2" data-reveal>Cinci albume.<br><span class="fire-text">Un singur suflet.</span></h2>
-            <p class="lead" data-reveal>Douăzeci de ani de drum în cinci capitole, de la primul album la vinilul aniversar.</p>
+            <h2 class="h2" data-reveal>Muzica <span class="fire-text">noastră</span></h2>
+            <p class="lead" data-reveal>Douăzeci de ani de drum, cu aceeași energie.</p>
           </div>
           <div class="rail-nav" data-reveal>
             <button type="button" data-rail-prev aria-label="Albumul anterior"><svg aria-hidden="true" style="transform:scaleX(-1)"><use href="#arrow"/></svg></button>
@@ -411,13 +346,13 @@
         </div>
       </div>
 
-      <div class="rail" data-rail tabindex="0" aria-label="Discografie Damian &amp; Brothers">
+      <div class="rail" data-rail tabindex="0" aria-label="Discografie Damian Drăghici &amp; Brothers">
         <article class="album" data-reveal>
           <div class="album__art">
             <div class="vinyl" aria-hidden="true" style="--label:#c8161e"></div>
             <div class="sleeve sleeve--magdalena" aria-hidden="true">
               <svg class="sleeve__wheel"><use href="#wheel"/></svg>
-              <span class="sleeve__top">Damian &amp; Brothers</span>
+              <span class="sleeve__top">Damian Drăghici &amp; Brothers</span>
               <span class="sleeve__title">Magdalena</span>
               <span class="sleeve__sub">Keeping the fire alive</span>
             </div>
@@ -425,7 +360,7 @@
           <div class="album__info">
             <span class="album__year">2007</span>
             <h3>Magdalena <small>Keeping the Fire Alive</small></h3>
-            <p>Primul album, alături de Filarmonika Rromanes. Punctul de pornire și o promisiune ținută de atunci: focul rămâne aprins.</p>
+            <p>Primul album al trupei Damian Drăghici &amp; Brothers, înregistrat la Roma.</p>
           </div>
         </article>
 
@@ -433,31 +368,32 @@
           <div class="album__art">
             <div class="vinyl" aria-hidden="true" style="--label:#ff8a1e"></div>
             <div class="sleeve sleeve--romaniac" aria-hidden="true">
-              <span class="sleeve__top">Damian &amp; Brothers</span>
+              <span class="sleeve__top">Damian Drăghici &amp; Brothers</span>
               <span class="sleeve__title">Ro<br>Maniac</span>
-              <span class="sleeve__sub">2 CD · Lăutărie</span>
+              <span class="sleeve__sub">CD dublu · Lăutărie</span>
             </div>
           </div>
           <div class="album__info">
             <span class="album__year">2009</span>
-            <h3>RoManiac</h3>
-            <p>Album dublu, alături de Brigada Retro Mishto: clasice lăutărești reinterpretate cu poftă, în stilul inconfundabil al fraților.</p>
+            <h3>RoManiac <small>CD dublu</small></h3>
+            <p>„RoManiac” aduce laolaltă energia inconfundabilă Damian Drăghici &amp; Brothers și cele mai iubite cântece de petrecere, de la „Inel, inel de aur”, „Șaraiman” și „La cârciuma de la drum” până la „Mămăligă brânzălie” și „Those Were the Days”. Un album exploziv, cu rădăcini lăutărești și ritmuri balcanice, care surprinde bucuria petrecerilor adevărate și pofta de viață a muzicii cântate din suflet.</p>
           </div>
         </article>
 
         <article class="album" data-reveal>
           <div class="album__art">
-            <div class="vinyl" aria-hidden="true" style="--label:#1fae5b"></div>
-            <div class="sleeve sleeve--colours" aria-hidden="true">
-              <span class="sleeve__top">Damian &amp; Brothers</span>
-              <span class="sleeve__title">Gipsy<br>Colours</span>
-              <span class="sleeve__sub">Balkan · Jazz · Lăutărie</span>
+            <div class="vinyl" aria-hidden="true" style="--label:#0e8a86"></div>
+            <div class="sleeve sleeve--cuban" aria-hidden="true">
+              <span class="sleeve__sun"></span>
+              <span class="sleeve__top">Damian Drăghici &amp; Brothers</span>
+              <span class="sleeve__title">Gypsy<br>Cuban</span>
+              <span class="sleeve__sub">Înregistrat în Cuba</span>
             </div>
           </div>
           <div class="album__info">
-            <span class="album__year">2011</span>
-            <h3>Gipsy Colours</h3>
-            <p>Toate culorile trupei într-un singur album: lăutărie, jazz și ritmuri balcanice, puse în aceeași paletă.</p>
+            <span class="album__year">2016</span>
+            <h3>Gypsy Cuban</h3>
+            <p>Album înregistrat în Cuba, în care Damian Drăghici aduce împreună lăutari români și cei mai mari muzicieni cubanezi, într-o întâlnire spectaculoasă între două culturi muzicale. Ritmurile latino și muzica lăutărească se împletesc într-un sunet original, plin de energie, pasiune și autenticitate.</p>
           </div>
         </article>
 
@@ -465,15 +401,33 @@
           <div class="album__art">
             <div class="vinyl" aria-hidden="true" style="--label:#e01b24"></div>
             <div class="sleeve sleeve--rock" aria-hidden="true">
-              <span class="sleeve__top">Damian &amp; Brothers</span>
+              <span class="sleeve__badge">Disc<br>de aur</span>
+              <span class="sleeve__top">Damian Drăghici &amp; Brothers</span>
               <span class="sleeve__title">Gypsy<br>Rock</span>
               <span class="sleeve__sub">Change or die</span>
             </div>
           </div>
           <div class="album__info">
+            <span class="album__year">2016</span>
+            <h3>Gypsy Rock <small>Change or Die · Disc de Aur</small></h3>
+            <p>„Gypsy Rock (Change or Die)” este albumul în care Damian Drăghici &amp; Brothers reinventează muzica lăutărească, aducând-o într-un univers sonor modern, cu influențe rock, pop, DNB, trap și nu numai. Alături de artiști precum Smiley, Delia, Andra, Loredana și Feli, cântece iubite de generații întregi capătă un sunet nou, într-un proiect recompensat cu Discul de Aur.</p>
+          </div>
+        </article>
+
+        <article class="album" data-reveal>
+          <div class="album__art">
+            <div class="vinyl" aria-hidden="true" style="--label:#f2c14e"></div>
+            <div class="sleeve sleeve--saraiman" aria-hidden="true">
+              <span class="sleeve__moon"></span>
+              <span class="sleeve__top">Damian Drăghici &amp; Brothers</span>
+              <span class="sleeve__title">Șaraiman</span>
+              <span class="sleeve__sub">Visul · Vinil aniversar</span>
+            </div>
+          </div>
+          <div class="album__info">
             <span class="album__year">2026</span>
-            <h3>Gypsy Rock <small>Change or Die</small></h3>
-            <p>Proiectul-manifest în care tradiția întâlnește rockul, alături de nume mari ale muzicii românești: Smiley, Andra, Delia, Loredana Groza, Ștefan Bănică și mulți alții.</p>
+            <h3>Șaraiman <small>Visul</small></h3>
+            <p>Vinil aniversar în ediție limitată, care celebrează începuturile Damian Drăghici &amp; Brothers și muzica ce a dat viață acestui proiect. De la „Șaraiman” și „Magdalena” până la „Zori de ziuă” și „Hopai Diri Diri”, albumul readuce emoția și energia primilor ani, la 20 de ani de la nașterea trupei.</p>
           </div>
         </article>
 
@@ -491,101 +445,35 @@
           <div class="album__info">
             <span class="album__year">2026</span>
             <h3>Ursitoare <small>Drumul</small></h3>
-            <p>Ediția aniversară pe vinil pentru 20 de ani de Damian &amp; Brothers. „Ursitoarele”, „Florăresele” și tot drumul de până aici, pe suport analog.</p>
+            <p>Vinil aniversar în ediție limitată, dedicat celor 20 de ani de muzică, pasiune și spectacole Damian Drăghici &amp; Brothers. Cu piese emblematice precum „Ursitoare”, „Inel, inel de aur”, „Florăresele” și „La Ciolpani”, albumul celebrează un parcurs muzical care a dus tradiția lăutărească pe marile scene ale lumii.</p>
           </div>
         </article>
       </div>
 
       <div class="container listen" data-reveal>
         <span>Ascultă acum</span>
-        <a class="btn btn--ghost btn--sm" href="https://open.spotify.com/track/6wS9DCEzwgPNkrFpiFoEAB" target="_blank" rel="noopener">„Ursitoare” pe Spotify</a>
-        <a class="btn btn--ghost btn--sm" href="https://music.youtube.com/channel/UC2JVpCQUuG6wqwE1LYc3a4A" target="_blank" rel="noopener">YouTube Music</a>
-      </div>
-    </section>
-
-    <div class="motif" aria-hidden="true"></div>
-
-    <!-- ============ 05 LEGACY ============ -->
-    <section class="section legacy" id="legacy">
-      <div class="container">
-        <p class="sec-head" data-reveal><span class="sec-num">05</span> Legacy</p>
-        <div class="legacy__intro">
-          <div class="legacy__big" data-reveal="fill" aria-hidden="true">20</div>
-          <div class="legacy__copy">
-            <h2 class="h2" data-reveal>Peste 20 de ani<br><span class="fire-text">de foc aprins.</span></h2>
-            <blockquote class="quote" data-reveal>
-              <p>„Am fost un copil sărac într-o familie de lăutari.”</p>
-              <footer>Damian Drăghici</footer>
-            </blockquote>
-            <p data-reveal>Din casa unei familii de lăutari până la Berklee, de pe străzile Bucureștiului până pe scena principală UNTOLD: povestea Damian &amp; Brothers e povestea unei culturi care a ales să strălucească. Și a unei misiuni duse mai departe la fiecare concert: să arate lumii frumusețea și demnitatea muzicii lăutărești și a culturii rrome.</p>
-          </div>
-        </div>
-
-        <div class="timeline" data-timeline>
-          <div class="timeline__fuse" aria-hidden="true"><span></span></div>
-          <ol>
-            <li class="tl" data-reveal>
-              <span class="tl__year">Rădăcini</span>
-              <h3>O familie de lăutari</h3>
-              <p>Damian se naște la București, într-o familie în care muzica se moștenește din generație în generație. Naiul devine vocea lui încă din copilărie.</p>
-            </li>
-            <li class="tl" data-reveal>
-              <span class="tl__year">1996</span>
-              <h3>Berklee, Boston</h3>
-              <p>Primește o bursă integrală la Berklee College of Music, pe care o absolvă în 1998. Naiul românesc intră în lumea jazzului.</p>
-            </li>
-            <li class="tl" data-reveal>
-              <span class="tl__year">2004</span>
-              <h3>Night of the Proms</h3>
-              <p>Pe aceeași scenă cu James Brown, Joe Cocker și Cyndi Lauper, în turneul european Night of the Proms.</p>
-            </li>
-            <li class="tl tl--key" data-reveal>
-              <span class="tl__year">2006</span>
-              <h3>Se naște Damian &amp; Brothers</h3>
-              <p>În decembrie, Damian își adună frații de scenă: lăutari celebri, cu aceeași dragoste pentru muzica lăutărească.</p>
-            </li>
-            <li class="tl" data-reveal>
-              <span class="tl__year">2007</span>
-              <h3>Magdalena: Keeping the Fire Alive</h3>
-              <p>Primul album: tradiția lăutărească, cântată cu sunetul de azi.</p>
-            </li>
-            <li class="tl" data-reveal>
-              <span class="tl__year">2009–11</span>
-              <h3>RoManiac &amp; Gipsy Colours</h3>
-              <p>Albumul dublu cu Brigada Retro Mishto, apoi o paletă întreagă de culori balcanice.</p>
-            </li>
-            <li class="tl" data-reveal>
-              <span class="tl__year">2023</span>
-              <h3>„Eu sunt”</h3>
-              <p>Damian sărbătorește 40 de ani de muzică printr-un concert-poveste la Sala Palatului.</p>
-            </li>
-            <li class="tl tl--key" data-reveal>
-              <span class="tl__year">2026</span>
-              <h3>20 de ani de fericire</h3>
-              <p>Concert aniversar sold-out la Sala Palatului, vinilul „Ursitoare: Drumul” și proiectul-manifest „Gypsy Rock: Change or Die”.</p>
-            </li>
-            <li class="tl" data-reveal>
-              <span class="tl__year">2026</span>
-              <h3>UNTOLD, scena principală</h3>
-              <p>Lăutărie pe Mainstage-ul UNTOLD de la Cluj-Napoca: ritmuri balcanice în fața unuia dintre cele mai mari publicuri din țară.</p>
-              <img src="assets/img/untold-stadion-zi-sm.webp" loading="lazy" width="900" height="600" alt="Trupa pe pasarela scenei principale UNTOLD, cu stadionul plin">
-            </li>
-            <li class="tl tl--next" data-reveal>
-              <span class="tl__year">2027</span>
-              <h3>DESTIN</h3>
-              <p>31 martie, Sala Palatului. Următorul capitol îl scriem împreună.</p>
-              <a class="link-arrow" href="#destin">Ia-ți bilet <svg aria-hidden="true"><use href="#arrow"/></svg></a>
-            </li>
-          </ol>
+        <div class="listen__links">
+          <a class="listen__btn" href="https://open.spotify.com/search/Damian%20%26%20Brothers" target="_blank" rel="noopener" aria-label="Damian Drăghici &amp; Brothers pe Spotify">
+            <svg class="listen__icon" viewBox="0 0 24 24" aria-hidden="true" fill="#1DB954"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            <span>Spotify</span>
+          </a>
+          <a class="listen__btn" href="https://www.youtube.com/channel/UC2JVpCQUuG6wqwE1LYc3a4A" target="_blank" rel="noopener" aria-label="Damian Drăghici &amp; Brothers pe YouTube">
+            <svg class="listen__icon" viewBox="0 0 24 24" aria-hidden="true" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span>YouTube</span>
+          </a>
+          <a class="listen__btn" href="https://music.apple.com/ro/search?term=Damian%20%26%20Brothers" target="_blank" rel="noopener" aria-label="Damian Drăghici &amp; Brothers pe Apple Music">
+            <svg class="listen__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="6" fill="url(#am-grad)"/><path fill="#fff" d="M16.6 5.4v9.5a2.25 2.25 0 1 1-1.3-2.04V8.1L10.1 9.3v7.2a2.25 2.25 0 1 1-1.3-2.04V7.3z"/></svg>
+            <span>Apple Music</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ============ 06 VIDEO ============ -->
+    <!-- ============ 05 VIDEO ============ -->
     <section class="reel" id="video" data-reel>
       <div class="reel__sticky">
         <div class="reel__head container">
-          <p class="sec-head"><span class="sec-num">06</span> Video</p>
+          <p class="sec-head"><span class="sec-num">05</span> Video</p>
           <h2 class="h2">Din mijlocul <span class="fire-text">spectacolului</span></h2>
           <p class="lead">Viață. Suflet. Tradiție. Dă sunetul mai tare.</p>
         </div>
@@ -622,20 +510,20 @@
       </div>
     </section>
 
-    <!-- ============ 07 REZERVĂRI ============ -->
-    <section class="section book" id="rezervari">
+    <!-- ============ 06 BOOKING ============ -->
+    <section class="section book" id="contact">
       <div class="container book__grid">
         <div class="book__copy">
-          <p class="sec-head" data-reveal><span class="sec-num">07</span> Rezervări</p>
-          <h2 class="h2" data-reveal>Rezervă trupa.<br><span class="fire-text">Restul e poveste.</span></h2>
-          <p class="lead" data-reveal>Concert, festival, gală, nuntă sau lansare de brand: spune-ne ce ai în minte și construim împreună momentul.</p>
+          <p class="sec-head" data-reveal><span class="sec-num">06</span> Booking</p>
+          <h2 class="h2" data-reveal>Cere o ofertă.<br><span class="fire-text">Restul e poveste.</span></h2>
+          <p class="lead" data-reveal>Concert, festival, gală, nuntă sau proiect special: spune-ne ce ai în minte și construim împreună momentul.</p>
           <ul class="flames book__list" data-reveal>
             <li>Show complet cu big band, soliste și dansatoare</li>
             <li>Program adaptat evenimentului tău</li>
             <li>Peste 20 de ani de experiență pe scenă</li>
           </ul>
           <div class="book__contact" data-reveal>
-            <span>Rezervări &amp; management</span>
+            <span>Booking &amp; management</span>
             <a href="mailto:booking@damiandraghici.ro" data-booking-link>booking@damiandraghici.ro</a>
           </div>
         </div>
@@ -663,7 +551,7 @@
                 <option>Concert / festival</option>
                 <option>Eveniment corporate</option>
                 <option>Eveniment privat (nuntă, aniversare)</option>
-                <option>Brand / colaborare</option>
+                <option>Proiect special</option>
                 <option>Altceva</option>
               </select>
             </div>
@@ -710,30 +598,30 @@
           <h2 class="footer__h">Explorează</h2>
           <ul>
             <li><a href="#trupa">Trupa</a></li>
-            <li><a href="#focul">Experiența</a></li>
+            <li><a href="#experienta">Experiența</a></li>
             <li><a href="#destin">Destin · 31.03.2027</a></li>
             <li><a href="#muzica">Muzica</a></li>
-            <li><a href="#legacy">Legacy</a></li>
+            <li><a href="#video">Video</a></li>
           </ul>
         </div>
         <div>
           <h2 class="footer__h">Ascultă &amp; urmărește</h2>
           <ul>
-            <li><a href="https://open.spotify.com/track/6wS9DCEzwgPNkrFpiFoEAB" target="_blank" rel="noopener">Spotify</a></li>
-            <li><a href="https://music.youtube.com/channel/UC2JVpCQUuG6wqwE1LYc3a4A" target="_blank" rel="noopener">YouTube Music</a></li>
+            <li><a href="https://open.spotify.com/search/Damian%20%26%20Brothers" target="_blank" rel="noopener">Spotify</a></li>
+            <li><a href="https://www.youtube.com/channel/UC2JVpCQUuG6wqwE1LYc3a4A" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://music.apple.com/ro/search?term=Damian%20%26%20Brothers" target="_blank" rel="noopener">Apple Music</a></li>
             <li><a href="https://www.tiktok.com/@damiandraghiciofficial" target="_blank" rel="noopener">TikTok</a></li>
             <li><a href="https://damiandraghici.ro/" target="_blank" rel="noopener">damiandraghici.ro</a></li>
           </ul>
         </div>
         <div>
-          <h2 class="footer__h">Rezervări</h2>
+          <h2 class="footer__h">Booking</h2>
           <p>Concerte, festivaluri, evenimente private și corporate.</p>
-          <a class="btn btn--fire btn--sm" href="#rezervari">Rezervă trupa</a>
+          <a class="btn btn--fire btn--sm" href="#contact">Contact</a>
         </div>
       </div>
       <div class="footer__base">
         <span>© <span data-year>2026</span> Damian Drăghici &amp; Brothers</span>
-        <span>Fotografii UNTOLD 2026: Julien Duval, RK</span>
         <a href="#acasa">Înapoi sus ↑</a>
       </div>
     </div>
@@ -742,7 +630,7 @@
   <!-- Bară de acțiune pe mobil -->
   <div class="mbar" data-mbar>
     <a class="btn btn--ghost btn--sm" href="#destin">Bilete DESTIN</a>
-    <a class="btn btn--fire btn--sm" href="#rezervari">Rezervă trupa</a>
+    <a class="btn btn--fire btn--sm" href="#contact">Contact</a>
   </div>
 
   <script src="assets/js/main.js" defer></script>

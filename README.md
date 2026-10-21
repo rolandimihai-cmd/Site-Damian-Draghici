@@ -6,14 +6,13 @@ Landing page pentru trupa **Damian Drăghici & Brothers**. Concept vizual: **FOC
 
 | # | Secțiune | Rol |
 |---|----------|-----|
-| — | **Hero** | Prima impresie: numele trupei, „Focul nu se stinge. Se cântă.”, CTA-uri către rezervare și bilete |
-| 01 | **Trupa** | Info structurat: Rădăcini, Lumea, Frăția, plus cifre-cheie |
-| 02 | **Experiența** | Sales: „Cum se aprinde focul” în 4 timpi (scroll sticky + „temperatura sălii”), apoi 3 oferte (concerte, evenimente private/corporate, branduri) |
+| — | **Hero** | Numele trupei, „Sunetul petrecerii tale. Energia pe care n-o uiți.”, butoane „Contactează trupa” și „Bilete DESTIN” |
+| 01 | **Trupa** | Povestea pe scurt, plus cifre-cheie (2006, 20+ ani, 6 albume, Sala Palatului) |
+| 02 | **Experiența** | „Adu spectacolul la tine”: 3 oferte (concerte & festivaluri, evenimente private & corporate, proiecte speciale) |
 | 03 | **Destin** | Următorul concert (31.03.2027, Sala Palatului): countdown, link iaBilet, „Adaugă în calendar” (.ics) |
-| 04 | **Muzica** | Discografia în 5 albume, cu vinil care iese din copertă la hover |
-| 05 | **Legacy** | „Peste 20 de ani de foc aprins”: timeline cu fitil care arde la scroll |
-| 06 | **Video** | Fereastră video care se deschide pe tot ecranul la scroll; pornește fără sunet, cu butoane pentru sunet, pauză și ecran complet |
-| 07 | **Rezervări** | Formular care deschide emailul cu cererea precompletată |
+| 04 | **Muzica** | „Muzica noastră”: 6 albume, cu vinil care iese din copertă la hover, plus linkuri Spotify, YouTube și Apple Music |
+| 05 | **Video** | Videoul crește de la un cadru la ecran complet la scroll; pornește fără sunet, cu butoane pentru sunet, pauză și ecran complet |
+| 06 | **Booking** (`#contact`) | „Cere o ofertă”: formular care deschide emailul cu cererea precompletată |
 
 ## Tehnic
 
@@ -43,8 +42,11 @@ Merge pe orice hosting static: GitHub Pages (Settings → Pages → branch), Net
 
 ## De completat înainte de lansare
 
-- [ ] **Email de rezervări**: acum e `booking@damiandraghici.ro`, o adresă **provizorie**. Se schimbă în `index.html` (`data-email` pe formular și linkul din secțiunea Rezervări).
+- [ ] **Afișul DESTIN**: clientul a cerut un alt format al afișului; trebuie primite fișierele (`assets/img/destin-afis.webp`).
+- [ ] **Videoul de prezentare**: clientul a cerut înlocuirea cu varianta modificată (`assets/video/`).
+- [ ] **Spotify și Apple Music**: linkurile duc acum la căutarea „Damian & Brothers”; trebuie înlocuite cu profilurile oficiale (în `index.html`, secțiunea Muzica și footer).
+- [ ] **Email de rezervări**: acum e `booking@damiandraghici.ro`, o adresă **provizorie**. Se schimbă în `index.html` (`data-email` pe formular și linkul din secțiunea Booking).
 - [ ] **Instagram / Facebook**: nu sunt încă în footer, pentru că nu am putut confirma conturile oficiale.
 - [ ] **Coperțile albumelor**: coperțile din pagină sunt ilustrații CSS. Coperțile reale pot înlocui `.sleeve`.
 - [ ] **Open Graph**: după alegerea domeniului, `og:image` trebuie trecut ca URL absolut.
-- [ ] **Fotografii**: creditele UNTOLD (Julien Duval, RK) sunt luate din numele fișierelor. Restul fotografiilor nu au credit.
+- [ ] **Fotografii**: fotografiile folosite nu au încă credite de fotograf.

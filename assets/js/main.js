@@ -84,16 +84,13 @@
   }, { threshold: 0.6 });
   $$('[data-count]').forEach((el) => counterObserver.observe(el));
 
-  /* ---------- Scroll: progres, nav, parallax, roți, fitil timeline ---------- */
+  /* ---------- Scroll: progres, nav, parallax, roți, video ---------- */
   const progress = $('.progress span');
   const mbar = $('[data-mbar]');
-  const booking = $('#rezervari');
+  const booking = $('#contact');
   const parallaxEls = $$('[data-parallax]');
   const wheels = $$('[data-scroll-wheel]');
-  const timeline = $('[data-timeline]');
-  const fuse = timeline ? $('.timeline__fuse span', timeline) : null;
   const reel = $('[data-reel]');
-  const tlItems = timeline ? $$('.tl', timeline) : [];
   let ticking = false;
 
   function onScroll() {
@@ -121,14 +118,6 @@
         el.style.setProperty('--py', offset.toFixed(1) + 'px');
       });
       wheels.forEach((w) => w.style.setProperty('rotate', (y * 0.06).toFixed(1) + 'deg'));
-    }
-
-    if (timeline) {
-      const r = timeline.getBoundingClientRect();
-      const line = vh * 0.62;
-      const p = Math.min(1, Math.max(0, (line - r.top) / r.height));
-      fuse.style.setProperty('--p', p.toFixed(4));
-      tlItems.forEach((li) => li.classList.toggle('is-lit', li.getBoundingClientRect().top + 14 < line));
     }
 
     // Fereastra video: progres 0 → 1 în primele ~70% din scroll-ul secțiunii
@@ -236,30 +225,6 @@
     });
   }
   $$('[data-embers]').forEach((c) => Embers(c));
-
-  /* ---------- Povestea focului: pași sticky ---------- */
-  const story = $('[data-story]');
-  if (story) {
-    const frame = $('.story__frame', story);
-    const imgs = $$('.story__frame img', story);
-    const steps = $$('.step', story);
-    const num = $('[data-story-num]', story);
-    const name = $('[data-story-name]', story);
-    const setStep = (i) => {
-      steps.forEach((s, k) => s.classList.toggle('is-active', k === i));
-      imgs.forEach((img, k) => img.classList.toggle('is-active', k === i));
-      frame.style.setProperty('--heat', ((i + 1) / steps.length).toFixed(2));
-      num.textContent = String(i + 1).padStart(2, '0');
-      name.textContent = steps[i].dataset.name;
-    };
-    const stepObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) setStep(parseInt(entry.target.dataset.step, 10));
-      });
-    }, { rootMargin: '-48% 0px -48% 0px' });
-    steps.forEach((s) => stepObserver.observe(s));
-    setStep(0);
-  }
 
   /* ---------- Countdown DESTIN ---------- */
   const countdown = $('[data-countdown]');

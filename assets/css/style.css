@@ -956,11 +956,14 @@ button { font: inherit; color: inherit; }
   position: relative;
   z-index: 3;
   display: grid;
-  grid-template-columns: .9fr 1.1fr;
+  grid-template-columns: minmax(0, .8fr) 1.2fr;
   gap: clamp(40px, 6vw, 100px);
   align-items: center;
 }
+/* Afiș vertical 9:16 */
 .destin__poster {
+  justify-self: center;
+  width: min(100%, 400px, (100vh - 170px) * 9 / 16);
   margin: 0;
   overflow: hidden;
   border-radius: var(--radius);
@@ -1763,7 +1766,7 @@ html:not(.js) .footer__word { background-size: 100% 100%; }
   .trupa__media { min-height: 0; aspect-ratio: 1 / 1; }
   .trupa__wheel { width: 150px; height: 150px; right: -30px; top: -40px; }
 
-  .destin__poster { max-width: 460px; }
+  .destin__poster { width: min(100%, 320px); }
   .destin__wheel { right: -40%; }
 
   .muzica__head { align-items: flex-start; flex-direction: column; gap: 0; }

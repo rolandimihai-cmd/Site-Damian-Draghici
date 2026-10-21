@@ -42,7 +42,6 @@ Merge pe orice hosting static: GitHub Pages (Settings → Pages → branch), Net
 
 ## De completat înainte de lansare
 
-- [ ] **Afișul DESTIN**: clientul a cerut un alt format al afișului; trebuie primite fișierele (`assets/img/destin-afis.webp`).
 - [ ] **Videoul de prezentare**: clientul a cerut înlocuirea cu varianta modificată (`assets/video/`).
 - [ ] **Spotify și Apple Music**: linkurile duc acum la căutarea „Damian & Brothers”; trebuie înlocuite cu profilurile oficiale (în `index.html`, secțiunea Muzica și footer).
 - [ ] **Email de rezervări**: acum e `booking@damiandraghici.ro`, o adresă **provizorie**. Se schimbă în `index.html` (`data-email` pe formular și linkul din secțiunea Booking).

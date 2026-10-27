@@ -42,10 +42,11 @@ Merge pe orice hosting static: GitHub Pages (Settings → Pages → branch), Net
 
 ## De completat înainte de lansare
 
+Booking: `contact@damiandraghici.ro` și 0730 085 032, preluate din bio-ul oficial de Instagram al trupei.
+
 - [ ] **Videoul de prezentare**: clientul a cerut înlocuirea cu varianta modificată (`assets/video/`).
 - [ ] **Spotify și Apple Music**: linkurile duc acum la căutarea „Damian & Brothers”; trebuie înlocuite cu profilurile oficiale (în `index.html`, secțiunea Muzica și footer).
-- [ ] **Email de rezervări**: acum e `booking@damiandraghici.ro`, o adresă **provizorie**. Se schimbă în `index.html` (`data-email` pe formular și linkul din secțiunea Booking).
-- [ ] **Instagram / Facebook**: nu sunt încă în footer, pentru că nu am putut confirma conturile oficiale.
+- [ ] **Facebook**: pagina `facebook.com/damianandbrothers` nu e încă în footer.
 - [ ] **Coperțile albumelor**: coperțile din pagină sunt ilustrații CSS. Coperțile reale pot înlocui `.sleeve`.
 - [ ] **Open Graph**: după alegerea domeniului, `og:image` trebuie trecut ca URL absolut.
 - [ ] **Fotografii**: fotografiile folosite nu au încă credite de fotograf.

@@ -10,7 +10,7 @@ Landing page pentru trupa **Damian Drăghici & Brothers**. Concept vizual: **FOC
 | 01 | **Trupa** | Povestea pe scurt, plus cifre-cheie (2006, 20+ ani, 6 albume, Sala Palatului) |
 | 02 | **Experiența** | „Adu spectacolul la tine”: 3 oferte (concerte & festivaluri, evenimente private & corporate, proiecte speciale) |
 | 03 | **Destin** | Următorul concert (31.03.2027, Sala Palatului): countdown, link iaBilet, „Adaugă în calendar” (.ics) |
-| 04 | **Muzica** | „Muzica noastră”: 6 albume, cu vinil care iese din copertă la hover, plus linkuri Spotify, YouTube și Apple Music |
+| 04 | **Muzica** | „Muzica noastră”: 6 albume, cu vinil care iese din copertă la hover, plus pictograme Spotify, YouTube, Apple Music și TikTok, Instagram, Facebook |
 | 05 | **Video** | Videoul crește de la un cadru la ecran complet la scroll; pornește fără sunet, cu butoane pentru sunet, pauză și ecran complet |
 | 06 | **Booking** (`#contact`) | „Cere o ofertă”: formular care deschide emailul cu cererea precompletată |
 
@@ -45,8 +45,6 @@ Merge pe orice hosting static: GitHub Pages (Settings → Pages → branch), Net
 Booking: `contact@damiandraghici.ro` și 0730 085 032, preluate din bio-ul oficial de Instagram al trupei.
 
 - [ ] **Videoul de prezentare**: clientul a cerut înlocuirea cu varianta modificată (`assets/video/`).
-- [ ] **Spotify și Apple Music**: linkurile duc acum la căutarea „Damian & Brothers”; trebuie înlocuite cu profilurile oficiale (în `index.html`, secțiunea Muzica și footer).
-- [ ] **Facebook**: pagina `facebook.com/damianandbrothers` nu e încă în footer.
 - [ ] **Coperțile albumelor**: coperțile din pagină sunt ilustrații CSS. Coperțile reale pot înlocui `.sleeve`.
 - [ ] **Open Graph**: după alegerea domeniului, `og:image` trebuie trecut ca URL absolut.
 - [ ] **Fotografii**: fotografiile folosite nu au încă credite de fotograf.

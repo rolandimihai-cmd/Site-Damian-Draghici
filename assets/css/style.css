@@ -1299,6 +1299,12 @@ button { font: inherit; color: inherit; }
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  gap: 24px 48px;
+}
+.listen__group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 12px 14px;
 }
 .listen__links { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -1321,7 +1327,7 @@ button { font: inherit; color: inherit; }
 }
 .listen__btn:hover { border-color: var(--orange); background: rgba(255, 138, 30, .1); transform: translateY(-2px); }
 .listen__icon { width: 30px; height: 30px; flex: none; }
-.listen > span {
+.listen__group > span {
   margin-right: 8px;
   font-size: .74rem;
   font-weight: 700;
